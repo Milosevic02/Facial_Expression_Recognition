@@ -18,3 +18,25 @@ X_test = X_test.reshape(-1,48,48,1)
 
 y_train = train['emotion']
 y_test = test['emotion']
+
+K = len(set(y_train))
+print("number of classes: ",K)
+
+print("x_train.shape: " , X_train.shape)
+print("y_train.shape",y_train.shape)
+input_shape = (48,48,1)
+i = Input(shape = input_shape)
+x = Conv2D(32,(3,3),activation = 'relu')(i)
+x = MaxPooling2D((2, 2))(x)
+x = Conv2D(64,(3,3),activation = 'relu')(x)
+x = MaxPooling2D((2, 2))(x)
+x = Conv2D(128,(3,3),activation = 'relu')(x)
+x = MaxPooling2D((2, 2))(x)
+x = Conv2D(256,(3,3),activation = 'relu')(x)
+x = MaxPooling2D((2, 2))(x)
+x = Flatten()(x)
+x = Dense(128,activation = 'relu')(x)
+x = Dropout(0.3)(x)
+x = Dense(K,activation = 'softmax')(x)
+
+model = Model(i,x)
