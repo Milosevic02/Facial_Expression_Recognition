@@ -4,7 +4,7 @@ This project implements a Convolutional Neural Network (CNN) for facial expressi
 
 ## Dataset
 
-The FER2013 dataset consists of 48x48-pixel grayscale images of faces. The dataset is split into training and test sets. The training set is used to train the CNN model, while the test set is used to evaluate the model's performance. The model achieves an accuracy of approximately 70% on the test set.
+The FER2013 dataset consists of 48x48-pixel grayscale images of faces. The dataset is split into training and test sets. The training set is used to train the CNN model, while the test set is used to evaluate the model's performance. The model achieves an accuracy of approximately 70% on the test set. Link for dataset: https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge
 
 ## Model Architecture
 
