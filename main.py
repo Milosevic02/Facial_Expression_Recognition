@@ -43,3 +43,5 @@ model = Model(i,x)
 
 model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
 
+r = model.fit(X_train,y_train,batch_size=32,epochs=10,verbose=1, validation_data=(X_test, y_test))
+
